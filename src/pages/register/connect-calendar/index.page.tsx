@@ -8,7 +8,7 @@ import {
 import { signIn, useSession } from 'next-auth/react'
 
 export default function Register() {
-  const session = useSession()
+  // const session = useSession()
 
   // async function handleRegister() {}
 
@@ -35,9 +35,9 @@ export default function Register() {
             <ArrowRight />
           </Button>
         </ConnectItem>
-        <pre>
-          <Text>{JSON.stringify(session.data)}</Text>
-        </pre>
+        {/* <pre> */}
+        {/*  <Text>{JSON.stringify(session.data)}</Text> */}
+        {/* </pre> */}
 
         <Button type="submit">
           Proximo passo
