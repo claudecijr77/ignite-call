@@ -31,7 +31,7 @@ export default async function handle(
   const isPastDate = referenceDate.endOf('day').isBefore(new Date())
 
   if (isPastDate) {
-    return res.json({ availabity: [] })
+    return res.json({ possibleTimes: [], availableTimes: [] })
   }
 
   console.log(user.id)
@@ -43,10 +43,8 @@ export default async function handle(
     },
   })
 
-  console.log(userAvailabity)
-
   if (!userAvailabity) {
-    return res.json({ availabity: [] })
+    return res.json({ possibleTimes: [], availableTimes: [] })
   }
 
   const { time_start_in_minutes, time_end_in_minutes } = userAvailabity
