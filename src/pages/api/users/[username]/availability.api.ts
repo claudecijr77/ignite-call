@@ -34,8 +34,6 @@ export default async function handle(
     return res.json({ possibleTimes: [], availableTimes: [] })
   }
 
-  console.log(user.id)
-
   const userAvailabity = await prisma.userTimeInterval.findFirst({
     where: {
       user_id: user.id,
