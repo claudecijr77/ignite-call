@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres-ignite:
+    image: postgres:11.6
+    container_name: postgres-ignite
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: ignitecall
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
